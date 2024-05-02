@@ -8,7 +8,9 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     public TMP_Text scoreText;
+    public TMP_Text hiScoreText;
     public static int scoreCount;
+    public static int hiCount;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,11 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (scoreCount > hiCount)
+        {
+            hiCount = scoreCount;
+        }
         scoreText.text = scoreCount.ToString();
-     
+        hiScoreText.text = "High score " + hiCount.ToString();
     }
 }

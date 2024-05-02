@@ -73,6 +73,7 @@ public class SnakeMovement : MonoBehaviour
             Vector3 SpawnPosition = new Vector3(Random.Range(-9f, 9f), -0.24f, Random.Range(-9f, 9f));
             Instantiate(ApplePrefab,SpawnPosition,Quaternion.identity);
             ScoreManager.scoreCount += 1;
+           
         }
         if (other.gameObject.name == "Wall")
         {
